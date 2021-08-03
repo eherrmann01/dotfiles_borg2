@@ -164,9 +164,9 @@ bindsym $mod+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split)
 # qwerty/azerty issue for letter z
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+z layout tabbed
+# bindsym $mod+e layout toggle split
 
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
