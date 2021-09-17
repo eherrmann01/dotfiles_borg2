@@ -23,7 +23,7 @@ alias paper='wal -qei  ~/Pictures/wallpaper'
 alias paper='wal -qei  /run/media/erik/linux_4TB/linuxBackups/home/erik/Pictures/wallpaper/'
  
 # Set wacom tablet area
-alias wacom='xsetwacom --set "Wacom Intuos S Pen stylus" area 0 0 3040 2050'
+alias wacom='xsetwacom --set "14" area 0 0 3040 2050'
 
 # Config for git_dotfile_repo
 alias gg='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

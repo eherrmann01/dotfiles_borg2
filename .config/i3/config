@@ -351,7 +351,6 @@ bindsym $mod+mod1+r exec --no-startup-id termite -e "ranger";focus
 # Xmenu
 bindsym $mod+Control+z exec --no-startup-id ~/bin/xmenu/xmenu.sh
 
-
 ## Screenshots
 bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 bindsym Control+Print exec --no-startup-id xfce4-screenshooter
