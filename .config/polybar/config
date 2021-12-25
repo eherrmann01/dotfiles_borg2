@@ -5,7 +5,7 @@
 ;  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 ;  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-; Polybar configuration file for erik-borg, updated 08/02/2021
+; Polybar configuration file for erik-borg, updated 11/28/2021
 
 ; ~/.config/polybar/config
 
@@ -115,7 +115,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = i3 xwindow 
 modules-center = date weather 
-modules-right = arch-updates
+modules-right = arch-updates powermenu 
 ;modules-right = networkspeedup networkspeeddown memory2 cpu2 volume 
 ;modules-right = pavolume 
 separator = //
@@ -270,7 +270,7 @@ strip-wsnumbers = true
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
-index-sort = false
+index-sort = true
 
 ; Create click handler used to focus workspace
 ; Default: true
@@ -582,7 +582,7 @@ date = %a,  %b %d %Y
 click-left = exec alacritty -e cal
 ;date = " %Y-%m-%d%"
 ;date-alt = " %d-%m-%Y"
-time = %l: %M %p
+time = %l:%M %p
 ;time = %H:%M
 ;time-alt = %H:%M
 ;format-prefix = " "
@@ -971,6 +971,44 @@ content-foreground = ${colors.foreground}
 content-background =  ${colors.background}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+################################################################################
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+;format-underline = #BF616A
+format-underline = #738adb
+format-background = ${colors.background}
+label-open = " Session "
+label-open-foreground = #ECEFF4
+label-close = " Close"
+label-close-foreground = #EBCB8B
+label-separator = |
+label-separator-foreground = #A3BE8C
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-2 = log out
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = reboot
+
+menu-2-0 = power off
+menu-2-0-exec = poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+menu-3-0 = log out
+menu-3-0-exec = i3-msg exit
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
 
 ################################################################################
 

@@ -35,7 +35,7 @@ YtabletactiveareaCM=20.7
 # default=1 for real precision zone, enlarge=1.5 or reduce=0.8
 # myfav: slighly-larger=1.11 with Intuos3 A4 and 96dpi 21inch 1080p workstation screen.
 #        larger=1.5 with Intuos4 Medium and 120dpi 15inch 1080p laptop screen.
-correctionscalefactor=1
+correctionscalefactor=1.5
 
 # Under this line, everything should be automatic, exept customising your buttons
 # Tablet

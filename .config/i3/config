@@ -67,6 +67,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 ## Run launchers ##
 # Dmenu
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop 
 bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 # Gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -222,8 +223,8 @@ exec --no-startup-id i3-msg exec 'nitrogen --restore'
 exec --no-startup-id i3-msg 'workspace 1; exec firejail /usr/bin/brave'
 
 #Start Barrier - EDH
-#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier --no-tray'
-exec --no-startup-id i3-msg 'workspace 1; exec barrier --no-window'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier --no-tray'
+# exec --no-startup-id i3-msg 'workspace 1; exec barrier --no-window'
 
 # Autotiling
 exec_always --no-startup-id autotiling
@@ -314,8 +315,8 @@ bindsym --release $mod+Escape exec xkill
 
 
 ## Erik's custom keyboard shortcuts ##
-# Firefox
-bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
+#Chromium
+bindsym $mod+F1 exec --no-startup-id chromium ;focus
 
 # Brave
 bindsym $mod+w exec --no-startup-id firejail brave;focus
